@@ -101,8 +101,7 @@ exports.googleLogin = async (req, res) => {
       //directly login
       let payload = {
         userName: newUser.userName,
-        password: newUser.password,
-        proPic: newUser.proPic,
+        userType: newUser.userType,
         email: newUser.email,
       };
       let token = jwt.sign(payload, process.env.jwtSecretKey);
